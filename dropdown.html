@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <style>
+        .menu_bar{
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: cornflowerblue;
+            border-radius: 10px;
+        }
+        .logo{
+            color:yellow;
+        }
+        .logo span{
+            color:red;
+        }
+        ul{
+            display: flex;
+gap:20px;
+list-style: none;
+right: 100px;
+position: relative;
+        }
+        ul li a{
+color: white;
+position: relative;
+ text-decoration: none;       
+}
+ul li a:hover{
+    color: black;
+}
+.drop_down{
+    display: none;
+    
+}
+ul li:hover .drop_down{
+    display: block;
+    position: absolute;
+    background-color: cornflowerblue;
+
+ }
+ .drop_down ul{
+    display: block;
+    margin: 10px;
+    position: relative;
+    right: 30px;
+ }
+ .drop_down ul li{
+    padding: 10px;
+ }
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+    </style>
+</head>
+<body>
+    <div class="menu_bar">
+        <h3 class="logo">Game<span>Wonders</span></h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+            <div class="drop_down">
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Discounts</a></li>
+                    <li><a href="#">Teams <i class="fas fa-caret-right"></i></a>
+                        
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">ContactUs</a></li>
+        </ul>
+    </div>
+</body>
+</html>
